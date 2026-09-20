@@ -2,9 +2,10 @@
 
 **Nhóm:** TEN-NHU-CU
 **Thành viên:** 
-1. Ngô Thế Việt (Leader / Core Implementation)
-2. Thành viên 2 (Data & Benchmark Lead)
-3. Thành viên 3 (Strategy & Heading Chunker Lead)
+1. **Ngô Thế Việt** (Nhóm trưởng / Core Implementation Lead)
+2. **Nguyễn Văn Giáp** (Data & Benchmark Lead)
+3. **Nguyễn Quang Đạo** (Strategy & Heading Chunker Lead)
+4. **Phùng Đình Triển** (Report & Demo Lead)
 **Ngày:** 20/09/2026
 
 > **Nộp 1 bản / nhóm.** Phần cá nhân (hướng tiếp cận, kết quả riêng, dự đoán…) mỗi thành viên nộp riêng trong `REPORT_CANHAN.md`. Chi tiết thang điểm: `docs/SCORING.md`.
@@ -17,22 +18,25 @@
 
 ### Chủ đề (Domain) & Lý Do Chọn
 
-**Chủ đề:** Chính sách Đổi trả, Bảo hành, Đồng kiểm và Quy định Người bán/Người mua trên Nền tảng Thương mại Điện tử Shopee.
+**Chủ đề:** Chính sách Đổi trả, Hoàn tiền, Bảo hành, Đồng kiểm và Quy định Người bán/Người mua trên Nền tảng Thương mại Điện tử Shopee.
 
 **Tại sao nhóm chọn chủ đề này?**
-> Nhóm chọn chủ đề chính sách TMĐT Shopee vì đây là nền tảng phổ biến nhất tại Việt Nam, có cấu trúc quy định rất chi tiết, có sự phân chia đối tượng rõ ràng giữa Người mua (`buyer`) và Người bán (`seller`), đồng thời có nhiều mốc thời hạn, chế tài cụ thể rất phù hợp để đánh giá năng lực truy xuất thông tin của mô hình RAG.
+> Nhóm chọn chủ đề chính sách TMĐT Shopee vì đây là sàn thương mại điện tử lớn nhất tại Việt Nam với lượng chính sách rất đa dạng, có ranh giới rõ ràng giữa quyền lợi Người mua (`buyer`) và trách nhiệm Người bán (`seller`). Đặc biệt, tài liệu có nhiều mốc thời gian (24h, 2 ngày, 15 ngày), con số (hạn mức 3.000.000đ) và các chế tài xử phạt giúp đánh giá chính xác năng lực truy xuất thông tin của mô hình RAG.
 
 ### Danh sách tài liệu (Data Inventory)
 
 | # | Tên tài liệu | Nguồn (Source URL) | Ngày lấy / Phiên bản | Số ký tự | Metadata đã gán |
 |---|--------------|------------|--------------------|----------|-----------------|
-| 1 | Chính sách bảo hành sản phẩm của Shopee | https://help.shopee.vn/portal/4/article/79046 | 2026-09-20 / not-stated | ~6,000 | `audience: buyer`, `category: warranty-policy` |
-| 2 | Quy định và hướng dẫn Đồng kiểm khi nhận hàng | https://banhang.shopee.vn/edu/article/18454 | 2026-09-20 / 30-07-2025 | ~2,000 | `audience: both`, `category: shipping-policy` |
-| 3 | Quy định về Hàng Giả/Nhái trên Shopee | https://banhang.shopee.vn/edu/article/1858 | 2026-09-20 / 09-09-2026 | ~2,300 | `audience: seller`, `category: compliance-policy` |
-| 4 | Quy định về Hệ thống điểm phạt Sao Quả Tạ cho Người bán | https://banhang.shopee.vn/edu/article/2433 | 2026-09-20 / 11-06-2024 | ~2,500 | `audience: seller`, `category: seller-penalty` |
-| 5 | Hướng dẫn Người bán khiếu nại yêu cầu Trả hàng/Hoàn tiền | https://banhang.shopee.vn/edu/article/3647 | 2026-09-20 / 03-11-2025 | ~2,500 | `audience: seller`, `category: seller-policy` |
-| 6 | Chính sách Trả hàng và Hoàn tiền của Shopee | https://help.shopee.vn/portal/4/article/77251 | 2026-09-20 / not-stated | ~26,000 | `audience: both`, `category: returns-policy` |
-| 7 | Những quy định chung về Trả hàng/Hoàn tiền cho Người mua | https://help.shopee.vn/portal/4/article/79256 | 2026-09-20 / 24-11-2025 | ~2,500 | `audience: buyer`, `category: returns-policy-for-buyer` |
+| 1 | Những điều cần biết về Trả hàng do Đổi ý không còn nhu cầu | `help.shopee.vn/.../204305` | 2026-09-20 / not-stated | ~10,200 | `audience: buyer`, `category: returns-policy` |
+| 2 | Những quy định chung về Trả hàng/Hoàn tiền của Shopee | `help.shopee.vn/.../188931` | 2026-09-20 / not-stated | ~9,000 | `audience: buyer`, `category: returns-policy` |
+| 3 | Sản phẩm hạn chế trả hàng là gì? | `help.shopee.vn/.../79465` | 2026-09-20 / not-stated | ~2,400 | `audience: buyer`, `category: returns-policy` |
+| 4 | Chính sách bảo hành sản phẩm của Shopee | `help.shopee.vn/.../79046` | 2026-09-20 / not-stated | ~6,000 | `audience: buyer`, `category: warranty-policy` |
+| 5 | Quy định và hướng dẫn Đồng kiểm khi nhận hàng | `banhang.shopee.vn/.../18454` | 2026-09-20 / 30-07-2025 | ~7,400 | `audience: both`, `category: shipping-policy` |
+| 6 | Quy định về Hàng Giả/Nhái trên Shopee | `banhang.shopee.vn/.../1858` | 2026-09-20 / 09-09-2026 | ~2,700 | `audience: seller`, `category: compliance-policy` |
+| 7 | Quy định về Hệ thống điểm phạt Sao Quả Tạ cho Người bán | `banhang.shopee.vn/.../2433` | 2026-09-20 / 11-06-2024 | ~4,400 | `audience: seller`, `category: seller-penalty` |
+| 8 | Hướng dẫn Người bán khiếu nại yêu cầu Trả hàng/Hoàn tiền | `banhang.shopee.vn/.../3647` | 2026-09-20 / 03-11-2025 | ~4,800 | `audience: seller`, `category: seller-policy` |
+| 9 | Chính sách Trả hàng và Hoàn tiền của Shopee | `help.shopee.vn/.../77251` | 2026-09-20 / not-stated | ~26,000 | `audience: both`, `category: returns-policy` |
+| 10 | Những quy định chung về Trả hàng/Hoàn tiền cho Người mua | `help.shopee.vn/.../79256` | 2026-09-20 / 24-11-2025 | ~5,400 | `audience: buyer`, `category: returns-policy-for-buyer` |
 
 **Danh sách kiểm tra quản trị dữ liệu (Data governance checklist):**
 - [x] Tập tài liệu (Corpus) chỉ chứa nguồn công khai/được phép dùng và không chứa dữ liệu cá nhân, thông tin đăng nhập hoặc tài liệu nội bộ.
@@ -42,9 +46,9 @@
 
 | Trường metadata | Kiểu | Ví dụ giá trị | Tại sao hữu ích cho truy xuất (retrieval)? |
 |----------------|------|---------------|-------------------------------|
-| `doc_id` | `str` | `shopee-he-thong-sao-qua-ta` | Định danh tài liệu nguồn gốc, phục vụ việc truy vết nguồn và xóa tài liệu. |
-| `audience` | `str` | `buyer`, `seller`, `both` | **Bắt buộc L3B:** Phân tách rõ ràng đối tượng áp dụng để tránh lẫn lộn quyền lợi người mua vs chế tài người bán. |
-| `category` | `str` | `returns-policy`, `seller-penalty` | Lọc theo nhóm nghiệp vụ chuyên biệt (đổi trả, bảo hành, xử phạt). |
+| `doc_id` | `str` | `shopee-he-thong-sao-qua-ta` | Định danh tài liệu nguồn, phục vụ việc truy vết nguồn và xóa/cập nhật tài liệu. |
+| `audience` | `str` | `buyer`, `seller`, `both` | **Ràng buộc riêng của L3B:** Phân định rõ đối tượng áp dụng để tránh lẫn lộn quyền lợi người mua vs trách nhiệm người bán. |
+| `category` | `str` | `returns-policy`, `seller-penalty` | Lọc theo nhóm chính sách chuyên biệt (đổi trả, bảo hành, xử phạt, vận chuyển). |
 | `document_version` | `str` | `30-07-2025`, `not-stated` | Xác định phiên bản và tính hiệu lực thời gian của chính sách. |
 
 ---
@@ -63,15 +67,15 @@ Chạy `ChunkingStrategyComparator().compare()` trên tài liệu chính sách S
 
 ### Chiến lược của từng thành viên
 
-**Thành viên 1 — Ngô Thế Việt**
+**Thành viên 1 — Ngô Thế Việt (Core Lead)**
 - **Loại chiến lược:** `RecursiveChunker` (chunk_size=350)
 - **Mô tả & lý do chọn cho chủ đề này:** Tách đệ quy từ cấp đoạn văn (`\n\n`) xuống dòng (`\n`) và câu (`. `), giúp bảo toàn cấu trúc phân cấp điều khoản của văn bản chính sách Shopee.
 
-**Thành viên 2 — Thành viên 2**
+**Thành viên 2 — Nguyễn Văn Giáp (Data & Benchmark Lead)**
 - **Loại chiến lược:** `SentenceChunker` (max_sentences_per_chunk=2)
-- **Mô tả & lý do chọn:** Cắt văn bản thành từng cặp 2 câu liên tiếp nhằm tập trung vào từng phát biểu/quy định cụ thể, tránh việc chunk quá dài gây loãng điểm tương đồng cosine.
+- **Mô tả & lý do chọn:** Cắt văn bản thành từng cặp 2 câu liên tiếp nhằm tập trung vào từng phát biểu/quy định cụ thể, tránh việc chunk quá dài làm loãng vector embedding.
 
-**Thành viên 3 — Thành viên 3 (R3 - Strategy Lead)**
+**Thành viên 3 — Nguyễn Quang Đạo (Strategy Lead - R3)**
 - **Loại chiến lược:** `HeadingChunker` (Custom Chunker theo Heading Markdown `#`, `##`, `###`)
 - **Mô tả & lý do chọn:** Tách văn bản chính sách theo từng tiêu đề điều khoản. Khi một điều khoản quá dài cần chia nhỏ, tiêu đề mục luôn được tự động gắn lại vào đầu mỗi sub-chunk để giữ nguyên ngữ cảnh.
 - **Code snippet:**
@@ -100,13 +104,18 @@ class HeadingChunker:
         return chunks
 ```
 
+**Thành viên 4 — Phùng Đình Triển (Report & Demo Lead)**
+- **Loại chiến lược:** `FixedSizeChunker` (chunk_size=300, overlap=30)
+- **Mô tả & lý do chọn:** Dùng làm chiến lược đối chứng (baseline) để so sánh xem việc cắt cố định theo ký tự bị suy giảm chất lượng truy xuất ra sao so với các phương pháp theo ngữ nghĩa.
+
 ### So Sánh Giữa Các Thành Viên
 
 | Thành viên | Chiến lược (Strategy) | Điểm truy xuất (/10) | Điểm mạnh | Điểm yếu |
 |-----------|----------|----------------------|-----------|----------|
-| Ngô Thế Việt | `RecursiveChunker` | 8/10 | Giữ khối ngữ cảnh tự nhiên, không bị vỡ đoạn | Có thể thừa thông tin không liên quan trong chunk |
-| Thành viên 2 | `SentenceChunker` | 6/10 | Chunk ngắn, tập trung đúng câu chứa số liệu | Mất ngữ cảnh tiêu đề của mục điều khoản |
-| Thành viên 3 | `HeadingChunker` | **10/10** | **Tốt nhất**: Bảo toàn tiêu đề mục và nội dung quy định đi kèm | Cần tài liệu nguồn viết chuẩn format Markdown |
+| Phùng Đình Triển | `FixedSizeChunker` | 2/10 | Đơn giản, tốc độ thực thi nhanh | Hay cắt cụt câu và tiêu đề, điểm thấp nhất |
+| Nguyễn Văn Giáp | `SentenceChunker` | 6/10 | Chunk ngắn, câu hoàn chỉnh | Thiếu tiêu đề mục điều khoản dẫn dắt |
+| Ngô Thế Việt | `RecursiveChunker` | 8/10 | Giữ khối ngữ cảnh tự nhiên rất tốt | Đôi khi gom thừa các câu không liên quan |
+| Nguyễn Quang Đạo | `HeadingChunker` | **10/10** | **Tối ưu nhất**: Bảo toàn tiêu đề mục và nội dung đi kèm | Phụ thuộc vào chất lượng format Markdown ban đầu |
 
 **Chiến lược nào tốt nhất cho chủ đề này? Tại sao?**
 > **`HeadingChunker` là chiến lược tối ưu nhất.** Đối với các tài liệu chính sách, mỗi tiêu đề mục (`### 1.2. Thời gian tối đa...`) mang ý nghĩa ngữ cảnh quyết định. Việc giữ tiêu đề gắn kèm nội dung giúp mô hình embedding xác định chính xác mục tiêu truy vấn ngay cả khi câu hỏi dùng từ ngữ khái quát.
@@ -119,7 +128,7 @@ class HeadingChunker:
 
 | # | Câu hỏi (Query) | Câu trả lời chuẩn (Gold Answer) | Chunk nào chứa thông tin? |
 |---|-------|-------------------------------|--------------------------|
-| 1 | Thời gian tối đa để gửi yêu cầu Trả hàng/Hoàn tiền cho đơn hàng thực phẩm tươi sống là bao lâu? | Trong vòng 24 giờ kể từ lúc đơn hàng được cập nhật trạng thái "Giao hàng thành công". | `shopee-returns-policy-for-buyer#0` |
+| 1 | Thời gian tối đa để gửi yêu cầu Trả hàng/Hoàn tiền cho đơn hàng thực phẩm tươi sống là bao lâu? | Trong vòng 24 giờ kể từ lúc đơn hàng được cập nhật trạng thái "Giao hàng thành công". | `shopee-returns-policy-for-buyer#0` / `general-returns-policy#0` |
 | 2 | Đơn hàng có giá trị trên bao nhiêu tiền thì KHÔNG được áp dụng chương trình Đồng kiểm? | Đơn hàng có giá trị lớn hơn 3.000.000 VND (3 Triệu Đồng). | `shopee-chinh-sach-dong-kiem#1` |
 | 3 | Người bán bị phạt bao nhiêu điểm Sao Quả Tạ nếu có tỷ lệ giao hàng trễ (LSR) từ 10% trở lên và trên 30 đơn? | 2 điểm phạt Sao Quả Tạ. | `shopee-he-thong-sao-qua-ta#1` |
 | 4 | Shop đăng bán sản phẩm hàng giả/hàng nhái trên Shopee sẽ phải chịu những chế tài xử lý nào? | Sản phẩm bị khóa/xóa, cộng điểm phạt Sao Quả Tạ, tạm thời đóng băng hoặc khóa vĩnh viễn tài khoản. | `shopee-chinh-sach-hang-cam-va-hang-gia#1` |
